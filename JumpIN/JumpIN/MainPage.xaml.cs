@@ -9,9 +9,16 @@ namespace JumpIN
 {
 	public partial class MainPage : ContentPage
 	{
-		public MainPage()
-		{
-			InitializeComponent();
-		}
+        private DayOfWeek now;
+
+        public MainPage()
+        {
+            InitializeComponent();
+            BoxView box = this.FindByName<BoxView>("box1");
+            now = DateTime.Now.DayOfWeek;
+            String currently = Convert.ToString(now);
+            Label currentlyLabel = this.FindByName<Label>("datetimeLabel");
+            currentlyLabel.Text = currently;
+        }
 	}
 }
