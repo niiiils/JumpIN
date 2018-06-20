@@ -3,12 +3,35 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:JumpIN"
              x:Class="JumpIN.MainPage">
-
-    <StackLayout>
-        <!-- Place new controls here -->
-    	<Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
-
+    <ScrollView>
+        <StackLayout>
+            <!-- Place new controls here -->
+            <Image Source="aletsch.jpg" HeightRequest="200" Aspect="AspectFill" Margin="0,0,0,20" />
+            
+            <BoxView
+             
+             Color="CornflowerBlue"
+             WidthRequest="330"
+             HeightRequest="350"
+             Margin="20"
+             VerticalOptions="Center"
+             HorizontalOptions="Center" />
+            <BoxView
+            
+             Color="CornflowerBlue"
+             WidthRequest="330"
+             HeightRequest="350"
+             Margin="20"
+             VerticalOptions="Center"
+             HorizontalOptions="Center" />
+            <BoxView
+            
+             Color="CornflowerBlue"
+             WidthRequest="330"
+             HeightRequest="350"
+             Margin="20"
+             VerticalOptions="Center"
+             HorizontalOptions="Center" />
+        </StackLayout>
+    </ScrollView>
 </ContentPage>
