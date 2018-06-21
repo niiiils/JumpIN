@@ -7,32 +7,59 @@
         <StackLayout>
             <!-- Place new controls here -->
             <AbsoluteLayout WidthRequest="450">
-                <Image Source="aletsch.jpg" HeightRequest="250" WidthRequest="430" Aspect="AspectFill" Margin="0,0,0,20" />
-                <Label x:Name="datetimeLabel" Text="Monday, 4. April 1998" TextColor="White" Margin="40,20"></Label>
-                <Label Text="Willkommen im" TextColor="White" Margin="40,170,20,20" FontSize="Large"></Label>
-                <Label Text="JumpIN" TextColor="White" Margin="40,200,20,20" FontSize="Large"></Label>
-                <Label x:Name="year" Text="1988" TextColor="White" Margin="125,200,20,20" FontSize="Large"></Label>
+                <!--<Image Source="aletsch.jpg" HeightRequest="250" WidthRequest="430" Aspect="AspectFill" Margin="0,0,0,20" /> -->
+                <Label x:Name="datetimeLabel" Text="Monday, 4. April 1998" TextColor="Gray" Margin="40,20"></Label>
+                <Label Text="Willkommen im" TextColor="Gray" Margin="40,60,20,20" FontSize="Micro"></Label>
+                <Label Text="JumpIn" FontAttributes="Bold" TextColor="Black" Margin="40,70,20,20" FontSize="Large"></Label>
+                <Label x:Name="year" Text="1988" TextColor="Black" Margin="130,70,20,20" FontSize="Large"></Label>
+                <StackLayout Grid.Column="0" BackgroundColor="#FFFFFF" Grid.Row="0" Margin="340,25">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnTapped"/>
+                    </StackLayout.GestureRecognizers>
+                    <AbsoluteLayout>
+                        <Image Source="user.png"/>
+                    </AbsoluteLayout>
+                </StackLayout>
             </AbsoluteLayout>
             
             <!-- Bio Menu -->
-            <Frame CornerRadius="15" WidthRequest="100" Margin="40,20" HeightRequest="350" Padding="0">
+            <Frame CornerRadius="15" WidthRequest="100" Margin="40,20" HeightRequest="350" Padding="0" x:Name="bio">
                 <StackLayout Grid.Column="0" BackgroundColor="#FFFFFF" Grid.Row="0">
                     <StackLayout.GestureRecognizers>
                         <TapGestureRecognizer Tapped="OnTapped"/>
                     </StackLayout.GestureRecognizers>
-                    <Label Text="Erstelle hier deinen&#x0a;Steckbrief!" TextColor="Black" Margin="30,260,0,0" FontSize="28"></Label>
-                
+                    <AbsoluteLayout>
+                        <Image Source="wanderung1.jpg" Aspect="AspectFill" Margin="0,0,0,20" />
+                        <Label Text="Erstelle hier deinen&#x0a;Steckbrief!" TextColor="White" FontAttributes="Bold" Margin="30,260,0,0" FontSize="28"></Label>
+                    </AbsoluteLayout>
                 </StackLayout>
             </Frame>
-            
+
+            <!-- Calendar Menu -->
+            <Frame CornerRadius="15" WidthRequest="100" Margin="40,20" HeightRequest="200" Padding="0">
+                <StackLayout Grid.Column="0" BackgroundColor="#FFFFFF" Grid.Row="0">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnTapped"/>
+                    </StackLayout.GestureRecognizers>
+                    <AbsoluteLayout>
+                        <Label Text="Heute" TextColor="Black" FontAttributes="Bold" Margin="30,20,0,0" FontSize="15"></Label>
+                        <Frame CornerRadius="8" WidthRequest="290" Margin="20,50" HeightRequest="130" Padding="2" BorderColor="LightGray" HasShadow="False">
+                            
+                        </Frame>
+                    </AbsoluteLayout>
+                </StackLayout>
+            </Frame>
+
             <!-- Events Voting Menu -->
             <Frame CornerRadius="15" WidthRequest="100" Margin="40,20" HeightRequest="350" Padding="0">
                 <StackLayout Grid.Column="0" BackgroundColor="#FFFFFF" Grid.Row="0">
                     <StackLayout.GestureRecognizers>
                         <TapGestureRecognizer Tapped="OnTapped"/>
                     </StackLayout.GestureRecognizers>
-                    <Label Text="Schreibe dich hier in&#x0a;eine Aktivität ein!" TextColor="Black" Margin="30,260,0,0" FontSize="28"></Label>
-
+                    <AbsoluteLayout>
+                        <Image Source="aletsch.jpg" Aspect="AspectFill" Margin="0,0,0,20" />
+                        <Label Text="Schreibe dich hier für&#x0a;eine Aktivität ein!" FontAttributes="Bold" TextColor="White" Margin="20,260,0,0" FontSize="28"></Label>
+                    </AbsoluteLayout>
                 </StackLayout>
             </Frame>
 
@@ -42,8 +69,32 @@
                     <StackLayout.GestureRecognizers>
                         <TapGestureRecognizer Tapped="OnTapped"/>
                     </StackLayout.GestureRecognizers>
-                    <Label Text="Erstelle hier deinen&#x0a;Steckbrief!" TextColor="Black" Margin="30,260,0,0" FontSize="28"></Label>
+                    <AbsoluteLayout>
+                        <Image Source="galerie1.jpg" Aspect="AspectFill" Margin="0,0,0,20" />
+                        <Label Text="Schau dir Bilder vom&#x0a;JumpIn an!" FontAttributes="Bold" TextColor="White" Margin="20,260,0,0" FontSize="28"></Label>
+                    </AbsoluteLayout>
+                </StackLayout>
+            </Frame>
 
+            <!-- Notruf Menu -->
+            <Frame CornerRadius="15" WidthRequest="100" Margin="40,20" HeightRequest="270" Padding="2" BorderColor="LightGray" HasShadow="False">
+                <StackLayout Grid.Column="0" BackgroundColor="Transparent" Grid.Row="0">
+                    <AbsoluteLayout>
+                        <Label Text="Notruf | Emergency" FontAttributes="Bold" FontSize="20" TextColor="Black" Margin="20" BackgroundColor="Transparent"></Label>
+                        
+                        <Label Text="Rega" TextColor="Black" Margin="20,80,0,0" FontSize="20"></Label>
+                        <Label Text="1414" TextColor="Gray" Margin="140,80,0,0" FontSize="20"></Label>
+                        
+                        <Label Text="Medizinisch" TextColor="Black" Margin="20,120,0,0" FontSize="20"></Label>
+                        <Label Text="144" TextColor="Gray" Margin="140,120,0,0" FontSize="20"></Label>
+
+                        <Label Text="Polizei" TextColor="Black" Margin="20,160,0,0" FontSize="20"></Label>
+                        <Label Text="117" TextColor="Gray" Margin="140,160,0,0" FontSize="20"></Label>
+
+                        <Label Text="Feuerwehr" TextColor="Black" Margin="20,200,0,0" FontSize="20"></Label>
+                        <Label Text="118" TextColor="Gray" Margin="140,200,0,0" FontSize="20"></Label>
+
+                    </AbsoluteLayout>
                 </StackLayout>
             </Frame>
         </StackLayout>

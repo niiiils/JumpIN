@@ -13,13 +13,20 @@ namespace JumpIN
         public MainPage()
         {
             InitializeComponent();
-            //BoxView box = this.FindByName<BoxView>("box1")
+            
             loadDate();
+            dayChecker();
         }
 
         void OnTapped(object sender, EventArgs e)
         {
             Console.WriteLine("du larry");
+        }
+
+        public void dayChecker()
+        {
+            Frame bioFrame = this.FindByName<Frame>("bio");
+            DayChecking dC = new DayChecking(bioFrame);
         }
 
         public void loadDate()
