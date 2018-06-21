@@ -9,18 +9,18 @@ using Xamarin.Forms.Xaml;
 
 namespace JumpIN
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class TimeUpdater : ContentPage
+	public partial class TimeUpdater
 	{
 		
         private DayOfWeek today;
         private String currentYear = DateTime.Now.Year.ToString();
+        
 
         public TimeUpdater(Label day, Label year)
         {
             today = DateTime.Now.DayOfWeek;
             String currently = Convert.ToString(today);
-            day.Text = currently;
+            day.Text = currently + ",   " + DateTime.Now.Day + "." + DateTime.Now.Month + "." + DateTime.Now.Year;
             year.Text = currentYear;
         }
 	}
