@@ -9,32 +9,43 @@
             <AbsoluteLayout WidthRequest="450">
                 <Image Source="aletsch.jpg" HeightRequest="250" WidthRequest="430" Aspect="AspectFill" Margin="0,0,0,20" />
                 <Label x:Name="datetimeLabel" Text="Monday, 4. April 1998" TextColor="White" Margin="40,20"></Label>
+                <Label Text="Willkommen im" TextColor="White" Margin="40,170,20,20" FontSize="Large"></Label>
                 <Label Text="JumpIN" TextColor="White" Margin="40,200,20,20" FontSize="Large"></Label>
+                <Label x:Name="year" Text="1988" TextColor="White" Margin="125,200,20,20" FontSize="Large"></Label>
             </AbsoluteLayout>
-            <BoxView
-             x:Name="box1"
-             Color="CornflowerBlue"
-             WidthRequest="330"
-             HeightRequest="350"
-             Margin="20"
-             VerticalOptions="Center"
-             HorizontalOptions="Center"/>
-            <BoxView
             
-             Color="CornflowerBlue"
-             WidthRequest="330"
-             HeightRequest="350"
-             Margin="20"
-             VerticalOptions="Center"
-             HorizontalOptions="Center" />
-            <BoxView
+            <!-- Bio Menu -->
+            <Frame CornerRadius="15" WidthRequest="100" Margin="40,20" HeightRequest="350" Padding="0">
+                <StackLayout Grid.Column="0" BackgroundColor="#FFFFFF" Grid.Row="0">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnTapped"/>
+                    </StackLayout.GestureRecognizers>
+                    <Label Text="Erstelle hier deinen&#x0a;Steckbrief!" TextColor="Black" Margin="30,260,0,0" FontSize="28"></Label>
+                
+                </StackLayout>
+            </Frame>
             
-             Color="CornflowerBlue"
-             WidthRequest="330"
-             HeightRequest="350"
-             Margin="20"
-             VerticalOptions="Center"
-             HorizontalOptions="Center"/>
+            <!-- Events Voting Menu -->
+            <Frame CornerRadius="15" WidthRequest="100" Margin="40,20" HeightRequest="350" Padding="0">
+                <StackLayout Grid.Column="0" BackgroundColor="#FFFFFF" Grid.Row="0">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnTapped"/>
+                    </StackLayout.GestureRecognizers>
+                    <Label Text="Schreibe dich hier in&#x0a;eine Aktivität ein!" TextColor="Black" Margin="30,260,0,0" FontSize="28"></Label>
+
+                </StackLayout>
+            </Frame>
+
+            <!-- Bio Menu -->
+            <Frame CornerRadius="15" WidthRequest="100" Margin="40,20" HeightRequest="350" Padding="0">
+                <StackLayout Grid.Column="0" BackgroundColor="#FFFFFF" Grid.Row="0">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnTapped"/>
+                    </StackLayout.GestureRecognizers>
+                    <Label Text="Erstelle hier deinen&#x0a;Steckbrief!" TextColor="Black" Margin="30,260,0,0" FontSize="28"></Label>
+
+                </StackLayout>
+            </Frame>
         </StackLayout>
     </ScrollView>
 </ContentPage>
