@@ -22,18 +22,6 @@
                 </StackLayout>
             </AbsoluteLayout>
             
-            <!-- Bio Menu -->
-            <Frame CornerRadius="15" WidthRequest="100" Margin="40,20" HeightRequest="350" Padding="0" x:Name="bio">
-                <StackLayout Grid.Column="0" BackgroundColor="#FFFFFF" Grid.Row="0">
-                    <StackLayout.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="OnTapped"/>
-                    </StackLayout.GestureRecognizers>
-                    <AbsoluteLayout>
-                        <Image Source="wanderung1.jpg" Aspect="AspectFill" Margin="0,0,0,20" />
-                        <Label Text="Erstelle hier deinen&#x0a;Steckbrief!" TextColor="White" FontAttributes="Bold" Margin="30,260,0,0" FontSize="28"></Label>
-                    </AbsoluteLayout>
-                </StackLayout>
-            </Frame>
 
             <!-- Calendar Menu -->
             <Frame CornerRadius="15" WidthRequest="100" Margin="40,20" HeightRequest="200" Padding="0">
@@ -50,31 +38,26 @@
                 </StackLayout>
             </Frame>
 
-            <!-- Events Voting Menu -->
-            <Frame CornerRadius="15" WidthRequest="100" Margin="40,20" HeightRequest="350" Padding="0">
-                <StackLayout Grid.Column="0" BackgroundColor="#FFFFFF" Grid.Row="0">
-                    <StackLayout.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="OnTapped"/>
-                    </StackLayout.GestureRecognizers>
-                    <AbsoluteLayout>
-                        <Image Source="aletsch.jpg" Aspect="AspectFill" Margin="0,0,0,20" />
-                        <Label Text="Schreibe dich hier für&#x0a;eine Aktivität ein!" FontAttributes="Bold" TextColor="White" Margin="20,260,0,0" FontSize="28"></Label>
-                    </AbsoluteLayout>
-                </StackLayout>
-            </Frame>
-
             <!-- Bio Menu -->
-            <Frame CornerRadius="15" WidthRequest="100" Margin="40,20" HeightRequest="350" Padding="0">
-                <StackLayout Grid.Column="0" BackgroundColor="#FFFFFF" Grid.Row="0">
-                    <StackLayout.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="OnTapped"/>
-                    </StackLayout.GestureRecognizers>
-                    <AbsoluteLayout>
-                        <Image Source="galerie1.jpg" Aspect="AspectFill" Margin="0,0,0,20" />
-                        <Label Text="Schau dir Bilder vom&#x0a;JumpIn an!" FontAttributes="Bold" TextColor="White" Margin="20,260,0,0" FontSize="28"></Label>
-                    </AbsoluteLayout>
-                </StackLayout>
-            </Frame>
+            <ListView x:Name="Cards" RowHeight="400">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame CornerRadius="15" WidthRequest="100" Margin="40,20" HeightRequest="350" Padding="0" BackgroundColor="Black">
+                                <StackLayout Grid.Column="0" BackgroundColor="Black" Grid.Row="0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnTapped"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <AbsoluteLayout>
+                                        <Image Source="{Binding imgName}" Aspect="AspectFill" Margin="0,0,0,20" />
+                                        <Label WidthRequest="300" Text="{Binding txtOnImage}" TextColor="{Binding txtColor}" FontAttributes="Bold" Margin="30,260,0,0" FontSize="28"></Label>
+                                    </AbsoluteLayout>
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
 
             <!-- Notruf Menu -->
             <Frame CornerRadius="15" WidthRequest="100" Margin="40,20" HeightRequest="270" Padding="2" BorderColor="LightGray" HasShadow="False">

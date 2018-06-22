@@ -11,11 +11,9 @@ namespace JumpIN
 {
 	public partial class TimeUpdater
 	{
-		
         private DayOfWeek today;
         private String currentYear = DateTime.Now.Year.ToString();
         
-
         public TimeUpdater(Label day, Label year)
         {
             today = DateTime.Now.DayOfWeek;
