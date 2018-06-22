@@ -10,9 +10,9 @@ Use the method `createMenuItem` in the main method of **MainPage.xaml.cs** in or
 
 ###### Parameters
 
-1. image     *\[this is the name of the image that can be found in the Resources directory\]*
-2. textColor *\[either "Black" or "White" in order to create a contrast\]*
-3. text      *\[this is the text on the menu item; It is formatted for 2-line-phrases\]*
+1. image     **String** *\[this is the name of the image that can be found in the Resources directory\]*
+2. textColor **String** *\[either "Black" or "White" in order to create a contrast\]*
+3. text      **String** *\[this is the text on the menu item; It is formatted for 2-line-phrases\]*
 
 ###### Example
 
