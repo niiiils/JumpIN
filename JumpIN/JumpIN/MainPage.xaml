@@ -14,7 +14,7 @@
                 <Label x:Name="year" Text="1988" TextColor="Black" Margin="130,70,20,20" FontSize="Large"></Label>
                 <StackLayout Grid.Column="0" BackgroundColor="#FFFFFF" Grid.Row="0" Margin="340,25">
                     <StackLayout.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="OnTapped"/>
+                        <TapGestureRecognizer Tapped="OnTappedAccount"/>
                     </StackLayout.GestureRecognizers>
                     <AbsoluteLayout>
                         <Image Source="user.png"/>
@@ -32,7 +32,6 @@
                     <AbsoluteLayout>
                         <Label Text="Heute" TextColor="Black" FontAttributes="Bold" Margin="30,20,0,0" FontSize="15"></Label>
                         <Frame CornerRadius="8" WidthRequest="290" Margin="20,50" HeightRequest="130" Padding="2" BorderColor="LightGray" HasShadow="False">
-                            
                         </Frame>
                     </AbsoluteLayout>
                 </StackLayout>
@@ -43,7 +42,7 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Frame CornerRadius="15" WidthRequest="100" Margin="40,20" HeightRequest="350" Padding="0" BackgroundColor="Black">
+                            <Frame CornerRadius="15" WidthRequest="100" Margin="40,20" HeightRequest="350" Padding="0" BackgroundColor="Black" x:Name="frame">
                                 <StackLayout Grid.Column="0" BackgroundColor="Black" Grid.Row="0">
                                     <StackLayout.GestureRecognizers>
                                         <TapGestureRecognizer Tapped="OnTapped"/>
