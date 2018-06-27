@@ -14,7 +14,15 @@ namespace JumpIN
 	{
 		public LoginRegister ()
 		{
-			
-		}
+            LoadStyle();
+            Label lb = new Label();
+            lb.Text = "Tschou";
+        }
+
+        public void LoadStyle()
+        {
+            Label lb = new Label();
+            lb.Text = "Tschou";
+        }
 	}
 }
