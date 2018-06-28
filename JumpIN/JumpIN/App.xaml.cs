@@ -9,7 +9,7 @@ namespace JumpIN
 	{
         public App ()
 		{
-			InitializeComponent();
+            InitializeComponent();
 
             MainPage = new NavigationPage(new MainPage());
             

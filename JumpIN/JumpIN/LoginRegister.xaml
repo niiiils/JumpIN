@@ -3,12 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="JumpIN.LoginRegister">
     <ContentPage.Content>
-        <ContentView BackgroundColor="Red">
-            <Label Text="No!"
+        <Frame BackgroundColor="Red">
+            <Label Text="Hello!"
                 TextColor="Black"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </ContentView>
+                />
+        </Frame>
         
     </ContentPage.Content>
 </ContentPage>
