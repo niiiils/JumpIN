@@ -34,8 +34,8 @@ namespace JumpIN
         // does something when account icon in top right corner is pressed
         void OnTappedAccount(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new LoginRegister());
-            Console.WriteLine("wo isch dr account");
+            //Navigation.PushModalAsync(new ProfileView());
+            Console.WriteLine("account");
         }
 
         // creates a new Menu Item
@@ -60,5 +60,9 @@ namespace JumpIN
         }
 
         
+        
+        
+        
+
     }
 }

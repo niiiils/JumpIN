@@ -9,13 +9,12 @@ using Xamarin.Forms.Xaml;
 
 namespace JumpIN
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class LoginRegister : ContentPage
-	{
-		public LoginRegister ()
-		{
-            Label label = new Label();
-            
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class ProfileView : ContentPage
+    {
+        public ProfileView()
+        {
+            InitializeComponent();
         }
-	}
+    }
 }
